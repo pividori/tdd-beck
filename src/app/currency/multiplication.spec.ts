@@ -7,9 +7,13 @@ describe('Currency multiplication', () => {
     it('should return the correct result', () => {
       const fiveDollars: Dollar = new Dollar(5);
 
-      fiveDollars.times(2)
+      let product: Dollar = fiveDollars.times(2)
 
-      expect(fiveDollars.amount).toEqual(10);
+      expect(product.amount).toEqual(10);
+
+      product = fiveDollars.times(3)
+
+      expect(product.amount).toEqual(15);
     });
   });
 });

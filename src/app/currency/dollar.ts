@@ -3,7 +3,7 @@ export class Dollar {
   constructor(public amount: number) {
   }
 
-  times(multiplier: number) {
-    this.amount *= multiplier;
+  times(multiplier: number): Dollar {
+    return new Dollar(this.amount * multiplier);
   }
 }
